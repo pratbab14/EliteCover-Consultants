@@ -909,8 +909,9 @@ function sendDetails(form, downloadBtnId, planName){
 
   // Hide all download buttons first
   document.querySelectorAll('.download-btn').forEach(btn => {
-    btn.style.display = 'none';
-  });
+  btn.style.display = 'none';
+});
+ 
 
   // Get form values
   const name = form.querySelector('input[name="name"]').value;
