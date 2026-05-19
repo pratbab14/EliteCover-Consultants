@@ -905,42 +905,46 @@ Ghuma, Ahmedabad, Gujarat - 380058
 
 <script>
 
-function toggleMenu(){
-  document.getElementById("nav-menu").classList.toggle("active");
-}
-
 function sendDetails(form, downloadBtnId, planName){
 
+  // Hide all download buttons first
+  document.querySelectorAll('.download-btn').forEach(btn => {
+    btn.style.display = 'none';
+  });
+
+  // Get form values
   const name = form.querySelector('input[name="name"]').value;
   const contact = form.querySelector('input[name="contact"]').value;
   const email = form.querySelector('input[name="email"]').value;
   const location = form.querySelector('input[name="location"]').value;
 
+  // WhatsApp message
   const message =
-`New Plan Inquiry:
+`New Lead Received
 
-Interested Plan: ${planName}
+Plan: ${planName}
 
 Name: ${name}
 Contact: ${contact}
 Email: ${email}
 Location: ${location}`;
 
-  const whatsappUrl =
-`https://wa.me/918487090212?text=${encodeURIComponent(message)}`;
+  // Open WhatsApp
+  window.open(
+    `https://wa.me/918487090212?text=${encodeURIComponent(message)}`,
+    '_blank'
+  );
 
-  window.open(whatsappUrl, '_blank');
-
-  document.getElementById(downloadBtnId).style.display='block';
+  // Show only selected download button
+  document.getElementById(downloadBtnId).style.display = 'inline-block';
 
   return false;
 }
 
-function downloadPDF(pdfUrl){
-  window.open(pdfUrl,'_blank');
+function downloadPDF(pdfFile){
+  window.open(pdfFile, '_blank');
 }
 
 </script>
-
 </body>
 </html>
