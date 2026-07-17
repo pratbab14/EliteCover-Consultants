@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>EliteCover Consultants</title>
-  
+
 <style>
 
 *{
@@ -77,40 +77,67 @@ nav a:hover{
 
 /* HERO */
 
-.hero{
-  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-  url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200');
-  background-size:cover;
-  background-position:center;
-  color:white;
-  text-align:center;
-  padding:120px 20px;
+.hero-video{
+    position:relative;
+    height:90vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
 }
 
-.hero h2{
-  font-size:48px;
-  margin-bottom:20px;
+.hero-bg{
+    position:absolute;
+    top:50%;
+    left:50%;
+    min-width:100%;
+    min-height:100%;
+    width:auto;
+    height:auto;
+    transform:translate(-50%,-50%);
+    object-fit:cover;
+    z-index:-2;
 }
 
-.hero p{
-  max-width:800px;
-  margin:auto;
-  font-size:18px;
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    z-index:-1;
 }
 
-.hero .btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:12px 25px;
-  background:#007acc;
-  color:#fff;
-  text-decoration:none;
-  border-radius:6px;
-  font-weight:bold;
+.hero-content{
+    max-width:900px;
+    padding:20px;
 }
 
-.hero .btn:hover{
-  background:#005f99;
+.hero-content h2{
+    font-size:58px;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.hero-content .btn{
+    display:inline-block;
+    background:#007acc;
+    color:#fff;
+    padding:15px 35px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.hero-content .btn:hover{
+    background:#005f99;
 }
 
 /* SECTION */
@@ -421,18 +448,25 @@ footer{
 
 </header>
 
-<!-- HERO -->
+<section class="hero-video" id="home">
 
-<section class="hero" id="home">
+    <video autoplay muted loop playsinline preload="auto" class="hero-bg">
+        <source src="download (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-<h2>Protecting Today, Securing Tomorrow</h2>
+    <div class="overlay"></div>
 
-<p>
-Trusted experts in Life Insurance, General Insurance,
-Finance, Savings, Investments and Loans.
-</p>
+    <div class="hero-content">
+        <h2>Protecting Today, Securing Tomorrow</h2>
 
-<a href="#contact" class="btn">Contact Us</a>
+        <p>
+            Trusted experts in Life Insurance, General Insurance,
+            Finance, Savings, Investments and Loans.
+        </p>
+
+        <a href="#contact" class="btn">Contact Us</a>
+    </div>
 
 </section>
 
@@ -908,8 +942,8 @@ Ghuma, Ahmedabad, Gujarat - 380058
 
 
 <section id="follow-us" style="background:#0A2540;color:#fff;padding:50px 20px;"><div class="container" style="text-align:center;"><h2>Follow Us</h2><p>Stay connected for updates and insurance tips.</p><div class="social-icons">
-<a href="https://www.facebook.com/elitecover26" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
-<a href="https://www.instagram.com/pratyushsharma585/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
 <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
 <a href="https://www.youtube.com/" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
 <a href="https://wa.me/918487090212" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
