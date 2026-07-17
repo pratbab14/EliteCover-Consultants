@@ -439,7 +439,7 @@ footer{
 .social-icons{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}.social-icons a{width:60px;height:60px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:28px;color:#fff;text-decoration:none;transition:.3s;box-shadow:0 8px 20px rgba(0,0,0,.25)}.social-icons a:hover{transform:translateY(-6px) scale(1.08)}.facebook{background:#1877F2}.instagram{background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4)}.linkedin{background:#0A66C2}.youtube{background:#F00}.whatsapp{background:#25D366}
 
 </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -472,9 +472,10 @@ footer{
 <section class="hero-video" id="home">
 
     <video
-    controls
+    id="heroVideo"
     loop
     playsinline
+    preload="auto"
     class="hero-bg">
         <source src="asset/video/Call Now +918487090212.mp4">
         Your browser does not support the video tag.
@@ -994,9 +995,8 @@ function sendDetails(form, downloadBtnId, planName){
 
   // Hide all download buttons first
   document.querySelectorAll('.download-btn').forEach(btn => {
-  btn.style.display = 'none';
-});
- 
+    btn.style.display = 'none';
+  });
 
   // Get form values
   const name = form.querySelector('input[name="name"]').value;
@@ -1030,6 +1030,38 @@ Location: ${location}`;
 function downloadPDF(pdfFile){
   window.open(pdfFile, '_blank');
 }
+
+/* ===========================
+   HERO VIDEO PLAY BUTTON
+=========================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const video = document.getElementById("heroVideo");
+    const playBtn = document.getElementById("playBtn");
+
+    if(video && playBtn){
+
+        playBtn.addEventListener("click", function(){
+
+            if(video.paused){
+
+                video.play();
+                video.muted = false;
+                playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+
+            }else{
+
+                video.pause();
+                playBtn.innerHTML = '<i class="fas fa-play"></i>';
+
+            }
+
+        });
+
+    }
+
+});
 
 </script>
 
