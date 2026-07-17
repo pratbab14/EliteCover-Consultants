@@ -139,7 +139,28 @@ nav a:hover{
 .hero-content .btn:hover{
     background:#005f99;
 }
+.play-btn{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90px;
+    height:90px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,122,204,.85);
+    color:#fff;
+    font-size:34px;
+    cursor:pointer;
+    z-index:20;
+    transition:.3s;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
 
+.play-btn:hover{
+    transform:translate(-50%,-50%) scale(1.1);
+    background:#005f99;
+}
 /* SECTION */
 
 section{
@@ -458,7 +479,9 @@ footer{
         <source src="asset/video/Call Now +918487090212.mp4">
         Your browser does not support the video tag.
     </video>
-
+<button id="playBtn" class="play-btn">
+    <i class="fas fa-play"></i>
+</button>
     <div class="overlay"></div>
 
     <div class="hero-content">
@@ -1009,5 +1032,30 @@ function downloadPDF(pdfFile){
 }
 
 </script>
+  const video = document.getElementById("heroVideo");
+const playBtn = document.getElementById("playBtn");
+
+playBtn.addEventListener("click", () => {
+
+    if(video.paused){
+
+        video.play();
+        video.muted = false;
+        playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+
+    }else{
+
+        video.pause();
+        playBtn.innerHTML = '<i class="fas fa-play"></i>';
+
+    }
+
+});
+
+video.addEventListener("ended",()=>{
+
+    playBtn.innerHTML='<i class="fas fa-play"></i>';
+
+});
 </body>
 </html>
