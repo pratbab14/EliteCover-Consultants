@@ -1032,30 +1032,6 @@ function downloadPDF(pdfFile){
 }
 
 </script>
-  const video = document.getElementById("heroVideo");
-const playBtn = document.getElementById("playBtn");
 
-playBtn.addEventListener("click", () => {
-
-    if(video.paused){
-
-        video.play();
-        video.muted = false;
-        playBtn.innerHTML = '<i class="fas fa-pause"></i>';
-
-    }else{
-
-        video.pause();
-        playBtn.innerHTML = '<i class="fas fa-play"></i>';
-
-    }
-
-});
-
-video.addEventListener("ended",()=>{
-
-    playBtn.innerHTML='<i class="fas fa-play"></i>';
-
-});
 </body>
 </html>
