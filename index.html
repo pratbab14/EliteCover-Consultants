@@ -438,6 +438,13 @@ footer{
 
 .social-icons{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}.social-icons a{width:60px;height:60px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:28px;color:#fff;text-decoration:none;transition:.3s;box-shadow:0 8px 20px rgba(0,0,0,.25)}.social-icons a:hover{transform:translateY(-6px) scale(1.08)}.facebook{background:#1877F2}.instagram{background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4)}.linkedin{background:#0A66C2}.youtube{background:#F00}.whatsapp{background:#25D366}
 
+
+.video-gallery{padding:70px 20px;background:#eef5fb}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px}
+.video-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.08)}
+.video-card video{width:100%;display:block}
+.video-card h3{text-align:center;padding:15px;color:#007acc}
+
 </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -462,6 +469,7 @@ footer{
 <a href="#services">Services</a>
 <a href="#products">Products</a>
 <a href="#blog">Blog</a>
+<a href="#videos">Videos</a>
 <a href="#partners">Partners</a>
 <a href="#team">Team</a>
 <a href="#contact">Contact</a>
@@ -887,6 +895,25 @@ Insurance helps build savings while protecting future goals.
 </div>
 
 </section>
+
+
+<section id="videos" class="video-gallery">
+<div class="container">
+<div class="section-title"><h2>Video Gallery</h2></div>
+<div class="video-grid">
+<div class="video-card">
+<video controls preload="metadata" poster="asset/video/poster1.jpg">
+<source src="asset/video/video1.mp4" type="video/mp4">
+</video><h3>Health Insurance</h3></div>
+<div class="video-card">
+<video controls preload="metadata">
+<source src="asset/video/video2.mp4" type="video/mp4">
+</video><h3>Motor Insurance</h3></div>
+<div class="video-card">
+<video controls preload="metadata">
+<source src="asset/video/video3.mp4" type="video/mp4">
+</video><h3>Life Insurance</h3></div>
+</div></div></section>
 
 <!-- PARTNERS -->
 
