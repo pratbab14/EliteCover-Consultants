@@ -445,9 +445,23 @@ footer{
 .video-card video{width:100%;display:block}
 .video-card h3{text-align:center;padding:15px;color:#007acc}
 
+
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}.review-card{background:rgba(255,255,255,.15);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:25px;text-align:center}.review-card img{width:90px;height:90px;border-radius:50%;border:4px solid #fff;object-fit:cover}.review-card h3,.review-card p{color:#fff}.stars{color:#F4B400;font-size:22px}
+.stats-section{background:#0A2540;padding:70px 20px}.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1200px;margin:auto}.stat-card{background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:25px;text-align:center;color:#fff}.stat-number{font-size:42px;font-weight:700;color:#F4B400}
+
+.carousel{position:relative;overflow:hidden;max-width:1100px;margin:auto}.carousel-track{display:flex;transition:transform .8s ease}.review-card{min-width:33.333%;box-sizing:border-box}
+@media(max-width:768px){.review-card{min-width:100%}}
 </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
+<style id="product-anim">
+.product-card{position:relative;overflow:hidden;transition:.45s;transform:translateY(40px);opacity:0}
+.product-card.show{opacity:1;transform:translateY(0)}
+.product-card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 20px 40px rgba(0,0,0,.2)}
+.product-card img{transition:transform .6s}.product-card:hover img{transform:scale(1.08)}
+.product-card:before{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-25deg)}
+.product-card:hover:before{animation:shine .9s}
+@keyframes shine{to{left:160%}}
+</style></head>
 
 <body>
 
@@ -907,7 +921,7 @@ Insurance helps build savings while protecting future goals.
 </video><h3>Health Insurance</h3></div>
 <div class="video-card">
 <video controls preload="metadata">
-<source src="asset/video/Call Now +918487090212.mp4" type="video/mp4">
+<source src="asset/video/video2.mp4" type="video/mp4">
 </video><h3>Motor Insurance</h3></div>
 <div class="video-card">
 <video controls preload="metadata">
@@ -915,8 +929,15 @@ Insurance helps build savings while protecting future goals.
 </video><h3>Life Insurance</h3></div>
 </div></div></section>
 
-<!-- PARTNERS -->
 
+<section id='reviews' style="background:#0A2540"><div class='container'><div class='section-title'><h2 style='color:#fff'>Client Reviews</h2></div><div class='carousel'><div class='carousel-track'><div class='review-card'><img src='https://randomuser.me/api/portraits/men/22.jpg'><h3>Rajesh Patel</h3><div class='stars'>★★★★★</div><p>Excellent vehicle insurance renewal experience.</p></div><div class='review-card'><img src='https://randomuser.me/api/portraits/women/55.jpg'><h3>Neha Shah</h3><div class='stars'>★★★★★</div><p>Professional guidance and hassle-free service.</p></div><div class='review-card'><img src='https://randomuser.me/api/portraits/men/75.jpg'><h3>Vikram Mehta</h3><div class='stars'>★★★★★</div><p>Outstanding claim assistance.</p></div></div></div></section><!-- PARTNERS -->
+
+<section class="stats-section"><div class="section-title"><h2 style="color:#fff">Our Performance</h2></div><div class="stats-grid">
+<div class="stat-card"><div class="stat-number" data-target="2500">0</div><p>Auto Insurance Renewed</p></div>
+<div class="stat-card"><div class="stat-number" data-target="1200">0</div><p>New Auto Policies Issued</p></div>
+<div class="stat-card"><div class="stat-number" data-target="850">0</div><p>Claim Requests</p></div>
+<div class="stat-card"><div class="stat-number" data-target="820">0</div><p>Claims Settled</p></div>
+</div></section>
 <section id="partners">
 
 <div class="container">
@@ -1000,8 +1021,8 @@ Ghuma, Ahmedabad, Gujarat - 380058
 <section id="follow-us" style="background:#0A2540;color:#fff;padding:50px 20px;"><div class="container" style="text-align:center;"><h2>Follow Us</h2><p>Stay connected for updates and insurance tips.</p><div class="social-icons">
 <a href="https://www.facebook.com/elitecover26" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
 <a href="https://www.instagram.com/pratyushsharma585/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
-<a href="https://www.linkedin.com/company/elitecover-consultants/?viewAsMember=true" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-<a href="https://youtube.com/@elitecoverconsultant?si=SsfpBJGUwQoF9oAW" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+<a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://www.youtube.com/" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
 <a href="https://wa.me/918487090212" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
 </div></div></section>
 
@@ -1094,7 +1115,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function toggleMenu(){document.getElementById('nav-menu').classList.toggle('active');}
 document.querySelectorAll('#nav-menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav-menu').classList.remove('active')));
+
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.stat-number').forEach(n=>{let t=+n.dataset.target,c=0,s=Math.max(1,Math.ceil(t/100));let i=setInterval(()=>{c+=s;if(c>=t){c=t;clearInterval(i)}n.textContent=c.toLocaleString()+'+'},20);});obs.disconnect();}})});obs.observe(document.querySelector('.stats-section'));
+
+const track=document.querySelector('.carousel-track');
+if(track){
+ const cards=[...track.children];let i=0;
+ setInterval(()=>{i=(i+1)%cards.length;track.style.transform=`translateX(-${i*(window.innerWidth<768?100:33.333)}%)`;},3000);
+}
 </script>
 
-</body>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.15});
+document.querySelectorAll('.product-card').forEach(c=>io.observe(c));
+</script></body>
 </html>
