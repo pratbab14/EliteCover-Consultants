@@ -1,10 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>EliteCover Consultants</title>
-
 <style>
 *{
   margin:0;
@@ -449,8 +449,15 @@ footer{
 
 .carousel{position:relative;overflow:hidden;max-width:964px;margin:auto}.carousel-track{display:flex;transition:transform .8s ease}.review-card{min-width:33.333%;box-sizing:border-box}
 @media(max-width:768px){.review-card{min-width:100%}}
+
+.form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:30px}
+.form-card{background:#fff;padding:22px;border-radius:12px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.08)}
+.form-card i{font-size:42px;color:#007acc;margin-bottom:10px}.form-card h3{color:#007acc}
+.form-card a{display:inline-block;margin-top:12px;background:#007acc;color:#fff;padding:10px 18px;border-radius:6px;text-decoration:none}
+@media(max-width:900px){.form-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.form-grid{grid-template-columns:1fr}}
 </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
 <style id="product-anim">
 .product-card{position:relative;overflow:hidden;transition:.45s;transform:translateY(40px);opacity:0}
 .product-card.show{opacity:1;transform:translateY(0)}
@@ -460,21 +467,15 @@ footer{
 .product-card:hover:before{animation:shine .9s}
 @keyframes shine{to{left:160%}}
 </style></head>
-
 <body>
-
 <header>
-
 <div class="header-left">
 <div class="logo-card">
-<img src="Elite Cover Logo.png" alt="Logo">
+<img alt="Logo" src="Elite Cover Logo.png"/>
 </div>
-
 <h1>EliteCover Consultants</h1>
 </div>
-
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
 <nav id="nav-menu">
 <a href="#home">Home</a>
 <a href="#about">About</a>
@@ -486,51 +487,30 @@ footer{
 <a href="#team">Team</a>
 <a href="#contact">Contact</a>
 </nav>
-
 </header>
-
 <section class="hero-video" id="home">
-
-    <video
-    id="heroVideo"
-    loop
-    playsinline
-    preload="auto"
-    class="hero-bg">
-        <source src="asset/video/elitecover_banner_FULL_10s.mp4">
+<video class="hero-bg" id="heroVideo" loop="" playsinline="" preload="auto">
+<source src="asset/video/elitecover_banner_FULL_10s.mp4"/>
         Your browser does not support the video tag.
     </video>
-<button id="playBtn" class="play-btn">
-    <i class="fas fa-play"></i>
+<button class="play-btn" id="playBtn">
+<i class="fas fa-play"></i>
 </button>
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-        <h2>                 </h2>
-
-        <p>
-
-
-          
-        </p>
-
-        <a href="#contact" class="btn">Contact Us</a>
-    </div>
-
+<div class="overlay"></div>
+<div class="hero-content">
+<h2> </h2>
+<p>
+</p>
+<a class="btn" href="#contact">Contact Us</a>
+</div>
 </section>
-
 <!-- ABOUT -->
-
 <section id="about">
-
 <div class="container">
-
 <div class="section-title">
 <h2>About Us</h2>
 </div>
-
 <div class="card-container">
-
 <div class="card">
 <h3>Our Vision</h3>
 <p>
@@ -543,394 +523,240 @@ To become a trusted leader in financial protection and wealth management.
 To protect lives, secure futures, and create financial growth for generations.
 </p>
 </div>
-
 <div class="card">
 <h3>Why Choose Us</h3>
 <p>
 Professional guidance, personalized financial solutions, and trusted support.
 </p>
 </div>
-
 </div>
-
 </div>
-
 </section>
-
 <!-- SERVICES -->
-
-
 <section id="services" style="background:
 linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.70)),
-url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1400');
+url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&amp;w=1400');
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
 color:white;">
-
-
 <div class="container">
-
 <div class="section-title">
 <h2>Our Services</h2>
 </div>
-
 <div class="card-container">
-
 <div class="card">
 <h3><i class="fas fa-shield-heart"></i> Life Insurance</h3>
 <p>Secure your family’s future with trusted insurance plans.</p>
 </div>
-
 <div class="card">
 <h3><i class="fas fa-car-burst"></i> General Insurance</h3>
 <p>Protect health, vehicle, business, and property.</p>
 </div>
-
 <div class="card">
 <h3><i class="fas fa-chart-line"></i> Investment Planning</h3>
 <p>Grow wealth through disciplined investment strategies.</p>
 </div>
-
 <div class="card">
 <h3><i class="fas fa-piggy-bank"></i> Savings Solutions</h3>
 <p>Smart savings plans for long-term financial goals.</p>
 </div>
-
 <div class="card">
 <h3><i class="fas fa-hand-holding-dollar"></i> Loans Assistance</h3>
 <p>Get support for personal and business financing.</p>
 </div>
-
 <div class="card">
 <h3><i class="fas fa-file-invoice-dollar"></i> Tax Planning</h3>
 <p>Maximize benefits and optimize tax savings.</p>
 </div>
-
 </div>
-
 </div>
-
 </section>
-
 <!-- PRODUCTS -->
-
-
 <section id="products" style="background:
 linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.70)),
-url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1400');
+url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&amp;w=1400');
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
 color:white;">
-
-
 <div class="container">
-
 <div class="section-title">
 <h2>Products</h2>
 </div>
-
 <div class="product-container">
 <!-- PRODUCTS -->
-
 <section id="products">
-
 <div class="container">
-
 <div class="section-title">
 <h2>Life Insurance Plans</h2>
 </div>
-
 <div class="product-container">
-
-  <!-- WHOLE  LIFE PlAN -->
-
+<!-- WHOLE  LIFE PlAN -->
 <div class="product">
-
 <h3>Whole Life Plan </h3>
-
 <p>
 “Secure your family’s future with guaranteed income, lifelong protection, lasting peace.
 </p>
 <!-- WHOLE LIFE PLAN -->
 <form onsubmit="return sendDetails(this,'download-wholelife','Whole Life Plan')">
-  
-<input type="text" name="name" placeholder="Name" required>
-
-<input type="text" name="contact" placeholder="Contact Number" required>
-
-<input type="email" name="email" placeholder="Email Address" required>
-
-<input type="text" name="location" placeholder="Location" required>
-
-<button type="submit" class="send-btn">Send</button>
-
+<input name="name" placeholder="Name" required="" type="text"/>
+<input name="contact" placeholder="Contact Number" required="" type="text"/>
+<input name="email" placeholder="Email Address" required="" type="email"/>
+<input name="location" placeholder="Location" required="" type="text"/>
+<button class="send-btn" type="submit">Send</button>
 </form>
-
-<button id="download-wholelife"
-class="download-btn"
-style="display:none;"
-onclick="downloadPDF('Plans/product1.pdf')">📄 Download Plan</button>
-
+<button class="download-btn" id="download-wholelife" onclick="downloadPDF('Plans/product1.pdf')" style="display:none;">📄 Download Plan</button>
 </div>
-
-
-
 <!-- TERM PLAN -->
-
 <div class="product">
-
 <h3>Term Insurance Plan</h3>
-
 <p>
 Affordable protection plan providing high life coverage and financial security for your family.
 </p>
 <!-- TERM PLAN -->
 <form onsubmit="return sendDetails(this,'download-term','Term Insurance Plan')">
-  
-<input type="text" name="name" placeholder="Name" required>
-
-<input type="text" name="contact" placeholder="Contact Number" required>
-
-<input type="email" name="email" placeholder="Email Address" required>
-
-<input type="text" name="location" placeholder="Location" required>
-<button type="submit" class="send-btn">Send</button>
-
+<input name="name" placeholder="Name" required="" type="text"/>
+<input name="contact" placeholder="Contact Number" required="" type="text"/>
+<input name="email" placeholder="Email Address" required="" type="email"/>
+<input name="location" placeholder="Location" required="" type="text"/>
+<button class="send-btn" type="submit">Send</button>
 </form>
-
-<button id="download-term"
-class="download-btn"
-style="display:none;"
-onclick="downloadPDF('Plans/product2.pdf')">📄 Download Plan</button>
-
-
+<button class="download-btn" id="download-term" onclick="downloadPDF('Plans/product2.pdf')" style="display:none;">📄 Download Plan</button>
 </div>
-
 <!-- ENDOWMENT PLAN -->
-
 <div class="product">
-
 <h3>Endowment Plan</h3>
-
 <p>
 Combination of savings and insurance offering guaranteed returns with life protection.
 </p>
-
 <!-- ENDOWMENT PLAN -->
 <form onsubmit="return sendDetails(this,'download-endowment','Endowment Plan')">
-
-<input type="text" name="name" placeholder="Name" required>
-
-<input type="text" name="contact" placeholder="Contact Number" required>
-
-<input type="email" name="email" placeholder="Email Address" required>
-
-<input type="text" name="location" placeholder="Location" required>
-
-<button type="submit" class="send-btn">Send</button>
-
+<input name="name" placeholder="Name" required="" type="text"/>
+<input name="contact" placeholder="Contact Number" required="" type="text"/>
+<input name="email" placeholder="Email Address" required="" type="email"/>
+<input name="location" placeholder="Location" required="" type="text"/>
+<button class="send-btn" type="submit">Send</button>
 </form>
-
-<button id="download-endowment" class="download-btn" style="display:none;"
-onclick="downloadPDF('plans/endowment-plan.pdf')">📄 Download Plan</button>
-
-
-
+<button class="download-btn" id="download-endowment" onclick="downloadPDF('plans/endowment-plan.pdf')" style="display:none;">📄 Download Plan</button>
 </div>
-
 <!-- MONEY BACK PLAN -->
-
 <div class="product">
-
 <h3>Money Back Plan</h3>
-
 <p>
 Get periodic returns during the policy term along with insurance protection benefits.
 </p>
-
 <!-- MONEY BACK PLAN -->
 <form onsubmit="return sendDetails(this,'download-moneyback','Money Back Plan')">
-  
-<input type="text" name="name" placeholder="Name" required>
-
-<input type="text" name="contact" placeholder="Contact Number" required>
-
-<input type="email" name="email" placeholder="Email Address" required>
-
-<input type="text" name="location" placeholder="Location" required>
-
-<button type="submit" class="send-btn">Send</button>
-
+<input name="name" placeholder="Name" required="" type="text"/>
+<input name="contact" placeholder="Contact Number" required="" type="text"/>
+<input name="email" placeholder="Email Address" required="" type="email"/>
+<input name="location" placeholder="Location" required="" type="text"/>
+<button class="send-btn" type="submit">Send</button>
 </form>
-
-<button id="download-moneyback" class="download-btn" style="display:none;"
-onclick="downloadPDF('Plans/money-back.pdf')">📄 Download Plan</button>
-
+<button class="download-btn" id="download-moneyback" onclick="downloadPDF('Plans/money-back.pdf')" style="display:none;">📄 Download Plan</button>
 </div>
-
 <!-- CHILD PLAN -->
-
 <div class="product">
-
 <h3>Child Education Plan</h3>
-
 <p>
 Secure your child’s future education and important milestones with long-term savings.
 </p>
-
 <!-- CHILD EDUCATION PLAN -->
 <form onsubmit="return sendDetails(this,'download-child','Child Education Plan')">
-  
-<input type="text" name="name" placeholder="Name" required>
-
-<input type="text" name="contact" placeholder="Contact Number" required>
-
-<input type="email" name="email" placeholder="Email Address" required>
-
-<input type="text" name="location" placeholder="Location" required>
-
-<button type="submit" class="send-btn">Send</button>
-
+<input name="name" placeholder="Name" required="" type="text"/>
+<input name="contact" placeholder="Contact Number" required="" type="text"/>
+<input name="email" placeholder="Email Address" required="" type="email"/>
+<input name="location" placeholder="Location" required="" type="text"/>
+<button class="send-btn" type="submit">Send</button>
 </form>
-
-<button id="download-child" class="download-btn" style="display:none;"
-onclick="downloadPDF('Plans/child-plan.pdf')">📄 Download Plan</button>
-
+<button class="download-btn" id="download-child" onclick="downloadPDF('Plans/child-plan.pdf')" style="display:none;">📄 Download Plan</button>
 </div>
-
 <!-- RETIREMENT PLAN -->
-
 <div class="product">
-
 <h3>Retirement / Pension Plan</h3>
-
 <p>
 Build a financially independent retirement with guaranteed pension and savings benefits.
 </p>
-
 <!-- RETIREMENT PLAN -->
 <form onsubmit="return sendDetails(this,'download-retirement','Retirement / Pension Plan')">
-  
-<input type="text" name="name" placeholder="Name" required>
-
-<input type="text" name="contact" placeholder="Contact Number" required>
-
-<input type="email" name="email" placeholder="Email Address" required>
-
-<input type="text" name="location" placeholder="Location" required>
-
-<button type="submit" class="send-btn">Send</button>
-
+<input name="name" placeholder="Name" required="" type="text"/>
+<input name="contact" placeholder="Contact Number" required="" type="text"/>
+<input name="email" placeholder="Email Address" required="" type="email"/>
+<input name="location" placeholder="Location" required="" type="text"/>
+<button class="send-btn" type="submit">Send</button>
 </form>
-
-<button id="download-retirement" class="download-btn" style="display:none;"
-onclick="downloadPDF('Plans/retirement-plan.pdf')">📄 Download Plan</button>
-
+<button class="download-btn" id="download-retirement" onclick="downloadPDF('Plans/retirement-plan.pdf')" style="display:none;">📄 Download Plan</button>
 </div>
-
 <!-- ULIP PLAN -->
-
 <div class="product">
-
 <h3>ULIP Plan</h3>
-
 <p>
 Market-linked investment plan with life insurance benefits and wealth creation opportunities.
 </p>
-
 <!-- ULIP PLAN -->
-  
 <form onsubmit="return sendDetails(this,'download-ulip','ULIP Plan')">
-
-<input type="text" name="name" placeholder="Name" required>
-
-<input type="text" name="contact" placeholder="Contact Number" required>
-
-<input type="email" name="email" placeholder="Email Address" required>
-
-<input type="text" name="location" placeholder="Location" required>
-
-<button type="submit" class="send-btn">Send</button>
-
+<input name="name" placeholder="Name" required="" type="text"/>
+<input name="contact" placeholder="Contact Number" required="" type="text"/>
+<input name="email" placeholder="Email Address" required="" type="email"/>
+<input name="location" placeholder="Location" required="" type="text"/>
+<button class="send-btn" type="submit">Send</button>
 </form>
-
-<button id="download-ulip" class="download-btn" style="display:none;"
-onclick="downloadPDF('Plans/ulip-plan.pdf')">📄 Download Plan</button>
-
+<button class="download-btn" id="download-ulip" onclick="downloadPDF('Plans/ulip-plan.pdf')" style="display:none;">📄 Download Plan</button>
 </div>
-
 </div>
-
 </div>
-
 </section>
 <!-- BLOG -->
-
-
 <section id="blog" style="background:
 linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.70)),
-url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1400');
+url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&amp;w=1400');
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
 color:white;">
-
-
 <div class="container">
-
 <div class="section-title">
 <h2>Latest Blogs</h2>
 </div>
-
 <div class="blog-post">
 <h3>The Importance of Life Insurance</h3>
 <p>
 Life insurance provides financial protection and peace of mind for families.
 </p>
 </div>
-
 <div class="blog-post">
 <h3>Why Start Investing Early</h3>
 <p>
 Early investing creates long-term financial security and wealth growth.
 </p>
 </div>
-
 <div class="blog-post">
 <h3>Insurance as a Financial Tool</h3>
 <p>
 Insurance helps build savings while protecting future goals.
 </p>
 </div>
-
 </div>
-
 </section>
-
-
-<section id="videos" class="video-gallery">
+<section class="video-gallery" id="videos">
 <div class="container">
 <div class="section-title"><h2>Video Gallery</h2></div>
 <div class="video-grid">
 <div class="video-card">
-<video controls preload="metadata" poster="asset/video/poster1.jpg">
-<source src="asset/video/video1.mp4" type="video/mp4">
+<video controls="" poster="asset/video/poster1.jpg" preload="metadata">
+<source src="asset/video/video1.mp4" type="video/mp4"/>
 </video><h3>Health Insurance</h3></div>
 <div class="video-card">
-<video controls preload="metadata">
-<source src="asset/video/Call Now +918487090212.mp4" type="video/mp4">
+<video controls="" preload="metadata">
+<source src="asset/video/Call Now +918487090212.mp4" type="video/mp4"/>
 </video><h3>Motor Insurance</h3></div>
 <div class="video-card">
-<video controls preload="metadata">
-<source src="asset/video/video3.mp4" type="video/mp4">
+<video controls="" preload="metadata">
+<source src="asset/video/video3.mp4" type="video/mp4"/>
 </video><h3>Life Insurance</h3></div>
 </div></div></section>
-
-
-<section id='reviews' style="background:#0A2540"><div class='container'><div class='section-title'><h2 style='color:#fff'>Client Reviews</h2></div><div class='carousel'><div class='carousel-track'><div class='review-card'><img src='https://randomuser.me/api/portraits/men/22.jpg'><h3>Rajesh Patel</h3><div class='stars'>★★★★★</div><p>Excellent vehicle insurance renewal experience.</p></div><div class='review-card'><img src='https://randomuser.me/api/portraits/women/55.jpg'><h3>Neha Shah</h3><div class='stars'>★★★★★</div><p>Professional guidance and hassle-free service.</p></div><div class='review-card'><img src='https://randomuser.me/api/portraits/men/75.jpg'><h3>Vikram Mehta</h3><div class='stars'>★★★★★</div><p>Outstanding claim assistance.</p></div></div></div></section><!-- PARTNERS -->
-
+<section id="reviews" style="background:#0A2540"><div class="container"><div class="section-title"><h2 style="color:#fff">Client Reviews</h2></div><div class="carousel"><div class="carousel-track"><div class="review-card"><img src="https://randomuser.me/api/portraits/men/22.jpg"/><h3>Rajesh Patel</h3><div class="stars">★★★★★</div><p>Excellent vehicle insurance renewal experience.</p></div><div class="review-card"><img src="https://randomuser.me/api/portraits/women/55.jpg"/><h3>Neha Shah</h3><div class="stars">★★★★★</div><p>Professional guidance and hassle-free service.</p></div><div class="review-card"><img src="https://randomuser.me/api/portraits/men/75.jpg"/><h3>Vikram Mehta</h3><div class="stars">★★★★★</div><p>Outstanding claim assistance.</p></div></div></div></div></section><!-- PARTNERS -->
 <section class="stats-section"><div class="section-title"><h2 style="color:#fff">Our Performance</h2></div><div class="stats-grid">
 <div class="stat-card"><div class="stat-number" data-target="2500">0</div><p>Auto Insurance Renewed</p></div>
 <div class="stat-card"><div class="stat-number" data-target="1200">0</div><p>New Auto Policies Issued</p></div>
@@ -938,105 +764,66 @@ Insurance helps build savings while protecting future goals.
 <div class="stat-card"><div class="stat-number" data-target="820">0</div><p>Claims Settled</p></div>
 </div></section>
 <section id="partners">
-
 <div class="container">
-
 <div class="section-title">
 <h2>Our Partners</h2>
 </div>
-
 <div class="logo-grid">
-
-<img src="LIC-Logo.png" alt="LIC">
-
-<img src="TATA_AIG_logo.png" alt="TATA">
-<img src="Digit.png" alt="Digit">
-
+<img alt="LIC" src="LIC-Logo.png"/>
+<img alt="TATA" src="TATA_AIG_logo.png"/>
+<img alt="Digit" src="Digit.png"/>
 </div>
-
-</div>
-
+<div class="section-title"><h2>Insurance Request Forms</h2></div><div class="form-grid"><div class="form-card"><i class="fas fa-heart-pulse"></i><h3>Health Cover</h3><a href="YOUR_GOOGLE_FORM_LINK">Google Form Link</a></div><div class="form-card"><i class="fas fa-car"></i><h3>Auto Insurance</h3><a href="YOUR_GOOGLE_FORM_LINK">Google Form Link</a></div><div class="form-card"><i class="fas fa-house"></i><h3>Property Insurance</h3><a href="YOUR_GOOGLE_FORM_LINK">Google Form Link</a></div><div class="form-card"><i class="fas fa-building"></i><h3>Corporate Insurance</h3><a href="YOUR_GOOGLE_FORM_LINK">Google Form Link</a></div><div class="form-card"><i class="fas fa-briefcase"></i><h3>Business Insurance</h3><a href="YOUR_GOOGLE_FORM_LINK">Google Form Link</a></div><div class="form-card"><i class="fas fa-ship"></i><h3>Marine Insurance</h3><a href="YOUR_GOOGLE_FORM_LINK">Google Form Link</a></div></div></div>
 </section>
-
 <!-- TEAM -->
-
 <section id="team">
-
 <div class="container">
-
 <div class="section-title">
 <h2>Meet Our Team</h2>
 </div>
-
 <div class="team-container">
-
 <div class="team-card">
-
-<img src="Pratyush Sharma.png" alt="Pratyush Sharma">
-
+<img alt="Pratyush Sharma" src="Pratyush Sharma.png"/>
 <div class="team-info">
 <h3>Pratyush Sharma</h3>
 <p class="position">Senior Insurance Advisor</p>
 <p>📞 +91-8487090212</p>
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 </section>
-
 <!-- CONTACT -->
-
 <section id="contact">
-
 <div class="container">
-
 <div class="section-title">
 <h2>Contact Us</h2>
 </div>
-
 <div class="contact-box">
-
 <p><strong>Email:</strong> pratbab14@gmail.com</p>
-
 <p><strong>Phone:</strong> +91-8487090212</p>
-
 <p>
-<strong>Address:</strong><br>
-33/1 Jainnagar Bungalows Part-2,<br>
+<strong>Address:</strong><br/>
+33/1 Jainnagar Bungalows Part-2,<br/>
 Ghuma, Ahmedabad, Gujarat - 380058
 </p>
-
 </div>
-
 </div>
-
 </section>
-
-
 <section id="follow-us" style="background:#0A2540;color:#fff;padding:50px 20px;"><div class="container" style="text-align:center;"><h2>Follow Us</h2><p>Stay connected for updates and insurance tips.</p><div class="social-icons">
-<a href="https://www.facebook.com/elitecover26" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
-<a href="https://www.instagram.com/elite_co_in/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
-<a href="https://www.linkedin.com/company/elitecover-consultants/?viewAsMember=true" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-<a href="https://www.youtube.com/@EliteCoverConsultant" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
-<a href="https://wa.me/918487090212" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+<a class="facebook" href="https://www.facebook.com/elitecover26" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a class="instagram" href="https://www.instagram.com/elite_co_in/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a class="linkedin" href="https://www.linkedin.com/company/elitecover-consultants/?viewAsMember=true" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+<a class="youtube" href="https://www.youtube.com/@EliteCoverConsultant" target="_blank"><i class="fab fa-youtube"></i></a>
+<a class="whatsapp" href="https://wa.me/918487090212" target="_blank"><i class="fab fa-whatsapp"></i></a>
 </div></div></section>
-
 <!-- FOOTER -->
-
 <footer>
-
 <p>
 © 2026 EliteCover Consultants. All Rights Reserved.
 </p>
-
 </footer>
-
 <!-- SCRIPTS -->
-
 <script>
 
 function sendDetails(form, downloadBtnId, planName){
@@ -1123,9 +910,8 @@ if(track){
  setInterval(()=>{i=(i+1)%cards.length;track.style.transform=`translateX(-${i*(window.innerWidth<768?100:33.333)}%)`;},3000);
 }
 </script>
-
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.15});
 document.querySelectorAll('.product-card').forEach(c=>io.observe(c));
-</script></body>
+</script></div></div></section></body>
 </html>
