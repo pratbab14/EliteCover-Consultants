@@ -3,7 +3,19 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>EliteCover Consultants</title>
+<title>EliteCover Consultants | Insurance Consultant in Ahmedabad</title>
+<meta name="description" content="EliteCover Consultants provides trusted insurance solutions in Ahmedabad, including life, health, motor, property, business, marine and corporate insurance. Get personalized insurance guidance and support.">
+<meta name="keywords" content="insurance consultant Ahmedabad, EliteCover Consultants, life insurance Ahmedabad, health insurance Ahmedabad, motor insurance Ahmedabad, corporate insurance, property insurance, marine insurance, business insurance">
+<meta name="author" content="EliteCover Consultants">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0A2540">
+<link rel="canonical" href="https://elitecoverconsultants.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="EliteCover Consultants | Insurance Solutions in Ahmedabad">
+<meta property="og:description" content="Life, health, motor, corporate, property, marine and business insurance solutions with personalized guidance.">
+<meta property="og:url" content="https://elitecoverconsultants.com/">
+<meta name="twitter:card" content="summary_large_image">
+
 <style>
 *{
   margin:0;
@@ -420,7 +432,7 @@ footer{
     display:block;
   }
 
-  .hero h2{
+  .hero-content h2{
     font-size:34px;
   }
 
@@ -465,12 +477,77 @@ footer{
 .product-card:before{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-25deg)}
 .product-card:hover:before{animation:shine .9s}
 @keyframes shine{to{left:160%}}
-</style></head>
-<body>
+
+/* SEO + accessibility + responsive performance improvements */
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+img, video { max-width: 100%; }
+button, a, input { -webkit-tap-highlight-color: transparent; }
+input, button { font: inherit; }
+:focus-visible { outline: 3px solid #F4B400; outline-offset: 3px; }
+
+@media (max-width: 768px) {
+  header { padding: 10px 16px; }
+  .header-left { min-width: 0; }
+  .logo-card img { width: 130px; height: auto; }
+  header h1 { font-size: 20px; margin-left: 10px; }
+  .hero-video { height: 72vh; min-height: 500px; }
+  .hero-content { padding: 16px; }
+  .hero-content h2 { font-size: clamp(30px, 9vw, 44px); line-height: 1.12; }
+  .hero-content p { font-size: 17px; }
+  .hero-content .btn { padding: 13px 24px; font-size: 16px; }
+  .play-btn { width: 70px; height: 70px; font-size: 26px; }
+  section { padding: 50px 15px; }
+  .section-title { margin-bottom: 30px; }
+  .section-title h2 { font-size: clamp(27px, 8vw, 36px); }
+  .card, .product, .team-card { width: 100%; }
+  .team-card { flex-direction: column; text-align: center; }
+  .form-grid, .video-grid, .review-grid, .stats-grid { grid-template-columns: 1fr; }
+  .social-icons a { width: 52px; height: 52px; font-size: 23px; }
+  .logo-grid img { width: 150px; }
+  .video-gallery { padding: 50px 15px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"InsuranceAgency",
+  "name":"EliteCover Consultants",
+  "url":"https://elitecoverconsultants.com/",
+  "telephone":"+91-8487090212",
+  "email":"pratbab14@gmail.com",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"33/1 Jainnagar Bungalows Part-2, Ghuma",
+    "addressLocality":"Ahmedabad",
+    "addressRegion":"Gujarat",
+    "postalCode":"380058",
+    "addressCountry":"IN"
+  },
+  "areaServed":"Ahmedabad, Gujarat, India",
+  "sameAs":[
+    "https://www.facebook.com/elitecover26",
+    "https://www.instagram.com/elite_co_in/",
+    "https://www.linkedin.com/company/elitecover-consultants/",
+    "https://www.youtube.com/@EliteCoverConsultant"
+  ]
+}
+</script>
+</head>
+<body><a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;top:auto;">Skip to main content</a>
 <header>
 <div class="header-left">
 <div class="logo-card">
-<img alt="Logo" src="Elite Cover Logo.png"/>
+<img alt="EliteCover Consultants insurance consultant logo" src="Elite Cover Logo.png" width="180" height="70" loading="eager"/>
 </div>
 <h1>EliteCover Consultants</h1>
 </div>
@@ -487,12 +564,12 @@ footer{
 <a href="#contact">Contact</a>
 </nav>
 </header>
-<section class="hero-video" id="home">
+<main id="main-content"><section class="hero-video" id="home">
 <video class="hero-bg" id="heroVideo" loop="" playsinline="" preload="auto">
 <source src="asset/video/elitecover_banner_FULL_10s.mp4"/>
         Your browser does not support the video tag.
     </video>
-<button class="play-btn" id="playBtn">
+<button class="play-btn" id="playBtn" type="button" aria-label="Play or pause hero video">
 <i class="fas fa-play"></i>
 </button>
 <div class="overlay"></div>
@@ -595,7 +672,7 @@ color:white;">
 <div class="product">
 <h3>Whole Life Plan </h3>
 <p>
-“Secure your family’s future with guaranteed income, lifelong protection, lasting peace.
+Secure your family’s future with guaranteed income, lifelong protection, and lasting peace.”
 </p>
 <!-- WHOLE LIFE PLAN -->
 <form onsubmit="return sendDetails(this,'download-wholelife','Whole Life Plan')">
@@ -768,9 +845,9 @@ Insurance helps build savings while protecting future goals.
 <h2>Our Partners</h2>
 </div>
 <div class="logo-grid">
-<img alt="LIC" src="LIC-Logo.png"/>
-<img alt="TATA" src="TATA_AIG_logo.png"/>
-<img alt="Digit" src="Digit.png"/>
+<img alt="LIC insurance partner logo" src="LIC-Logo.png" width="180" height="80" loading="lazy"/>
+<img alt="Tata AIG insurance partner logo" src="TATA_AIG_logo.png" width="180" height="80" loading="lazy"/>
+<img alt="Digit insurance partner logo" src="Digit.png" width="180" height="80" loading="lazy"/>
 </div>
 <div class="section-title"><h2>Insurance Request Forms</h2></div><div class="form-grid"><div class="form-card">
 <i class="fas fa-heart-pulse"></i><h3>Health Cover</h3><a href="https://docs.google.com/forms/d/e/1FAIpQLSddQi_YjaUl9fb1mDt3qTIyA_ITaKUOHxSjMQV3T_AK1VFVoQ/viewform">Google Form Link</a></div><div class="form-card">
@@ -919,4 +996,5 @@ if(track){
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.15});
 document.querySelectorAll('.product-card').forEach(c=>io.observe(c));
 </script></div></div></section></body>
+</main></body>
 </html>
