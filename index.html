@@ -29,7 +29,7 @@ body{
   color:#333;
   line-height:1.6;
 }
-  
+
 /* HEADER */
 
 header{
@@ -542,6 +542,70 @@ input, button { font: inherit; }
   ]
 }
 </script>
+
+<style id="blog-columns-responsive">
+.blog-post {
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.94);
+  color: #000;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+.blog-post h3 {
+  color: #007acc !important;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+.blog-image-placeholder {
+  width: 100%;
+  height: 220px;
+  margin: 0 auto 24px;
+  border-radius: 10px;
+  border: 2px dashed #b8c2cc;
+  background: #eef2f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #65717d;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-align: center;
+}
+.blog-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: start;
+}
+.blog-columns > div {
+  min-width: 0;
+}
+.blog-columns p {
+  color: #000 !important;
+  margin: 0 0 16px;
+  line-height: 1.7;
+}
+.blog-columns p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .blog-post {
+    padding: 18px;
+  }
+  .blog-image-placeholder {
+    height: 170px;
+    margin-bottom: 18px;
+  }
+  .blog-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .blog-columns > div + div {
+    margin-top: 4px;
+  }
+}
+</style>
 </head>
 <body><a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;top:auto;">Skip to main content</a>
 <header>
@@ -795,41 +859,61 @@ color:white;">
 <div class="section-title">
 <h2>Latest Blogs</h2>
 </div>
-<div class="blog-post">
+
+<article class="blog-post">
 <h3>The Importance of Life Insurance</h3>
-<p>
-<strong> Don’t Let Financial Pressure Choose Your Child’s Career </strong>
 
-After graduation, many young individuals feel anxious to start earning. In a hurry, they may accept the first available opportunity without thinking deeply about whether it matches their interests, skills and long-term career goals.
-
-The first job should not simply be the easiest job to get. It should ideally be a step toward the career they genuinely want.
-
-This is where early financial planning by parents can make a meaningful difference.
-
-When parents plan financially for their son or daughter from an early age, they can create a financial cushion for important milestones such as higher education, professional courses or the initial years of a career.
-
-This can reduce the pressure to choose a job purely for immediate income and give children the freedom to explore a career based on their interest, potential and passion.
-
-Parents may not be able to choose the right career for their children—but they can help create the financial freedom that allows their children to choose it themselves.
-
-<strong>Don’t just plan for their education. Plan for their freedom to choose.</strong>
-
-Because the right financial plan today can give your child the confidence to choose the right career tomorrow .
-
-</p>
+<div class="blog-image-placeholder" role="img" aria-label="Blog image placeholder">
+  <span>IMAGE PLACEHOLDER</span>
 </div>
-<div class="blog-post">
+
+<div class="blog-columns">
+<div>
+<p><strong>Don’t Let Financial Pressure Choose Your Child’s Career</strong> After graduation, many young individuals feel anxious to start earning. In a hurry, they may accept the first available opportunity without thinking deeply about whether it matches their interests, skills and long-term career goals.</p>
+
+<p>The first job should not simply be the easiest job to get. It should ideally be a step toward the career they genuinely want. This is where early financial planning by parents can make a meaningful difference.</p>
+</div>
+
+<div>
+<p>When parents plan financially for their son or daughter from an early age, they can create a financial cushion for important milestones such as higher education, professional courses or the initial years of a career.</p>
+
+<p>This can reduce the pressure to choose a job purely for immediate income and give children the freedom to explore a career based on their interest, potential and passion. Parents may not be able to choose the right career for their children—but they can help create the financial freedom that allows their children to choose it themselves.</p>
+
+<p><strong>Don’t just plan for their education. Plan for their freedom to choose.</strong> Because the right financial plan today can give your child the confidence to choose the right career tomorrow.</p>
+</div>
+</div>
+</article>
+
+<article class="blog-post">
 <h3>Why Start Investing Early</h3>
-<p>
-Early investing creates long-term financial security and wealth growth.
-</p>
+<div class="blog-image-placeholder" role="img" aria-label="Blog image placeholder">
+  <span>IMAGE PLACEHOLDER</span>
 </div>
-<div class="blog-post">
+<div class="blog-columns">
+<div>
+<p>Early investing creates long-term financial security and wealth growth.</p>
+</div>
+<div>
+<p>Starting early gives financial goals more time to grow through disciplined saving and investing.</p>
+</div>
+</div>
+</article>
+
+<article class="blog-post">
 <h3>Insurance as a Financial Tool</h3>
-<p>
-Insurance helps build savings while protecting future goals.
-</p>
+<div class="blog-image-placeholder" role="img" aria-label="Blog image placeholder">
+  <span>IMAGE PLACEHOLDER</span>
 </div>
+<div class="blog-columns">
+<div>
+<p>Insurance helps protect families and important financial goals against unexpected events.</p>
+</div>
+<div>
+<p>With suitable protection in place, long-term savings and investment goals can be pursued with greater confidence.</p>
+</div>
+</div>
+</article>
+
 </div>
 </section>
 <section class="video-gallery" id="videos">
