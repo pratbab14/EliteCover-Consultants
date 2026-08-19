@@ -15,7 +15,7 @@
 <meta property="og:description" content="Life, health, motor, corporate, property, marine and business insurance solutions with personalized guidance.">
 <meta property="og:url" content="https://elitecoverconsultants.com/">
 <meta name="twitter:card" content="summary_large_image">
-
+  
 <style>
 *{
   margin:0;
@@ -294,6 +294,27 @@ section{
     object-fit: cover;
     display: block;
 }
+  .content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.content-column {
+    text-align: justify;
+}
+
+.content-column h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.content-column p {
+    margin-top: 0;
+    margin-bottom: 22px;
+    line-height: 1.75;
+}
 /* PARTNERS */
 
 .logo-grid{
@@ -427,7 +448,11 @@ footer{
 /* MOBILE */
 
 @media(max-width:768px){
-
+.content-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
   nav{
     display:none;
     flex-direction:column;
