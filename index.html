@@ -618,6 +618,27 @@ input, button { font: inherit; }
   }
 }
 </style>
+<style>
+/* VIEW MORE BUTTON STYLE */
+.read-more-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 22px;
+  background-color: #007acc;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 15px;
+}
+
+.read-more-btn:hover {
+  background-color: #005f99;
+}
+</style>
 </head>
 <body><a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;top:auto;">Skip to main content</a>
 <header>
@@ -887,17 +908,14 @@ color:white;">
 <p><strong>Don’t Let Financial Pressure Choose Your Child’s Career</strong><br>
 After graduation, many young individuals feel anxious to start earning. In a hurry, they may accept the first available opportunity without thinking deeply about whether it matches their interests, skills and long-term career goals.</p>
 
-<p>The first job should not simply be the easiest job to get. It should ideally be a step toward the career they genuinely want. This is where early financial planning by parents can make a meaningful difference.</p>
+<p>The first job should not simply be the easiest job to get. It should ideally be a step toward the career they genuinely want...</p>
 </div>
 
 <div>
-<p>When parents plan financially for their son or daughter from an early age, they can create a financial cushion for important milestones such as higher education, professional courses or the initial years of a career.</p>
-
-<p>This can reduce the pressure to choose a job purely for immediate income and give children the freedom to explore a career based on their interest, potential and passion. Parents may not be able to choose the right career for their children—but they can help create the financial freedom that allows their children to choose it themselves.</p>
-
-<p><strong>Don’t just plan for their education. Plan for their freedom to choose.</strong> Because the right financial plan today can give your child the confidence to choose the right career tomorrow.</p>
+<p>When parents plan financially for their son or daughter from an early age, they can create a financial cushion for important milestones such as higher education, professional courses or the initial years of a career...</p>
 </div>
 </div>
+<button class="read-more-btn" onclick="openBlog('blog1')">View More</button>
 </article>
 
 <article class="blog-post">
@@ -910,30 +928,13 @@ After graduation, many young individuals feel anxious to start earning. In a hur
 </div>
 <div class="blog-columns">
 <div>
-<p>Every parent wants their child to have the freedom to choose a career based on interest, potential, and passion not financial limitations.The <br>
-foundation for that freedom begins with early investment.Starting early <br>
-in a Life Insurance Corporation (LIC) child education plan ensures that <br>
-your child’s dreams are supported by a strong, secure financial base.</p>
-<p> <strong>💰 Why Early Investment Matters</strong> </p>
-✅More Time for Growth: The earlier you start, the longer your money compounds.<br>
-✅Smaller Premiums, Bigger Returns: Early investors can contribute smaller amounts and still build a large corpus.<br>
-✅Stable Growth: LIC plans offer guaranteed additions and bonuses, ensuring consistent returns.<br>
-✅Financial Independence for Your Child: By the time your child reaches college age, funds are ready to cover education and career goals.
+<p>Every parent wants their child to have the freedom to choose a career based on interest, potential, and passion not financial limitations. The foundation for that freedom begins with early investment...</p>
 </div>
 <div>
-<p>Starting early gives financial goals more time to grow through disciplined saving and investing.</p>
-🛡️ Why Choose LIC
-✅Guaranteed returns with bonus additions<br>
-✅Loan facility against policy for emergencies<br>
-✅Long‑term security and flexibility<br>
-✅Trusted institution with decades of reliability<br><br>
-🌟 Key Takeaway
-Starting early isn’t just about saving it’s about buying time.<br>
-The earlier you invest, the more freedom your child will have to pursue<br>
-their dreams without financial stress.Invest today in LIC child education<br>
-plans  because tomorrow, your child deserves independence, not compromise.<br>
+<p>Starting early gives financial goals more time to grow through disciplined saving and investing...</p>
 </div>
 </div>
+<button class="read-more-btn" onclick="openBlog('blog2')">View More</button>
 </article>
 
 <article class="blog-post">
@@ -946,28 +947,14 @@ plans  because tomorrow, your child deserves independence, not compromise.<br>
 </div>
 <div class="blog-columns">
 <div>
-<p><strong> At 60, No Bank Will Lend — But LIC Will</strong> Reaching the age of 60 is a milestone — a time to enjoy the fruits of your labor. 
-Yet, it’s also when most financial institutions turn cautious. Whether it’s a bank, NBFC, or private lender, they often hesitate to offer loans 
-to retirees due to limited income and higher risk. But one name continues to stand strong — Life Insurance Corporation of India (LIC).</p>
-<p><strong> Why Financial Institutions Say “No”</strong>
-Most lenders evaluate your repayment capacity and income stability before approving a loan. At 60, these factors change:
-Regular salary income stops
-Pension may not meet loan eligibility criteria
-Shorter repayment tenure increases risk
-Collateral requirements become stricter
-Even reputed NBFCs and private finance companies prefer younger borrowers with active income streams.</p>
+<p><strong> At 60, No Bank Will Lend — But LIC Will</strong><br> Reaching the age of 60 is a milestone — a time to enjoy the fruits of your labor. Yet, it’s also when most financial institutions turn cautious...</p>
 </div>
 <div>
-<p><strong>🛡️ How LIC Stands Apart</strong>
-LIC offers loan‑against‑policy options that rely on your policy’s surrender value, not your age or income.
-This makes LIC unique among financial institutions:<br>
-✅ Loan available even after retirement<br>
-✅ No external collateral required<br>
-✅ Competitive interest rates<br> 
-✅ Hassle‑free documentation <br> 
-Your life insurance policy becomes your financial backup, ensuring liquidity when others say “no.”</p>
+<p><strong>🛡️ How LIC Stands Apart</strong><br>
+LIC offers loan‑against‑policy options that rely on your policy’s surrender value, not your age or income...</p>
 </div>
 </div>
+<button class="read-more-btn" onclick="openBlog('blog3')">View More</button>
 </article>
 
 </div>
@@ -1148,6 +1135,127 @@ if(track){
  const cards=[...track.children];let i=0;
  setInterval(()=>{i=(i+1)%cards.length;track.style.transform=`translateX(-${i*(window.innerWidth<768?100:33.333)}%)`;},3000);
 }
+
+
+/* ===========================
+   BLOG VIEW MORE FUNCTIONALITY
+=========================== */
+
+const blogData = {
+  blog1: {
+    title: "The Importance of Life Insurance",
+    image: "image/Copilot_20260819_233447.png",
+    content: `
+      <p><strong>Don’t Let Financial Pressure Choose Your Child’s Career</strong><br>
+      After graduation, many young individuals feel anxious to start earning. In a hurry, they may accept the first available opportunity without thinking deeply about whether it matches their interests, skills and long-term career goals.</p>
+      
+      <p>The first job should not simply be the easiest job to get. It should ideally be a step toward the career they genuinely want. This is where early financial planning by parents can make a meaningful difference.</p>
+      
+      <p>When parents plan financially for their son or daughter from an early age, they can create a financial cushion for important milestones such as higher education, professional courses or the initial years of a career.</p>
+      
+      <p>This can reduce the pressure to choose a job purely for immediate income and give children the freedom to explore a career based on their interest, potential and passion. Parents may not be able to choose the right career for their children—but they can help create the financial freedom that allows their children to choose it themselves.</p>
+      
+      <p><strong>Don’t just plan for their education. Plan for their freedom to choose.</strong> Because the right financial plan today can give your child the confidence to choose the right career tomorrow.</p>
+    `
+  },
+  blog2: {
+    title: "Why Start Investing Early",
+    image: "image/early age.png",
+    content: `
+      <p>Every parent wants their child to have the freedom to choose a career based on interest, potential, and passion not financial limitations. The foundation for that freedom begins with early investment. Starting early in a Life Insurance Corporation (LIC) child education plan ensures that your child’s dreams are supported by a strong, secure financial base.</p>
+      
+      <h3 style="color:#007acc; margin-top:20px;">💰 Why Early Investment Matters</h3>
+      <ul style="padding-left: 20px;">
+        <li><strong>More Time for Growth:</strong> The earlier you start, the longer your money compounds.</li>
+        <li><strong>Smaller Premiums, Bigger Returns:</strong> Early investors can contribute smaller amounts and still build a large corpus.</li>
+        <li><strong>Stable Growth:</strong> LIC plans offer guaranteed additions and bonuses, ensuring consistent returns.</li>
+        <li><strong>Financial Independence for Your Child:</strong> By the time your child reaches college age, funds are ready to cover education and career goals.</li>
+      </ul>
+      
+      <h3 style="color:#007acc; margin-top:20px;">🛡️ Why Choose LIC</h3>
+      <ul style="padding-left: 20px;">
+        <li>Guaranteed returns with bonus additions</li>
+        <li>Loan facility against policy for emergencies</li>
+        <li>Long‑term security and flexibility</li>
+        <li>Trusted institution with decades of reliability</li>
+      </ul>
+      
+      <p style="margin-top:20px;"><strong>🌟 Key Takeaway</strong><br>
+      Starting early isn’t just about saving it’s about buying time. The earlier you invest, the more freedom your child will have to pursue their dreams without financial stress. Invest today in LIC child education plans because tomorrow, your child deserves independence, not compromise.</p>
+    `
+  },
+  blog3: {
+    title: "Insurance as a Financial Tool",
+    image: "image/Loan.png",
+    content: `
+      <p><strong>At 60, No Bank Will Lend — But LIC Will</strong><br> Reaching the age of 60 is a milestone — a time to enjoy the fruits of your labor. Yet, it’s also when most financial institutions turn cautious. Whether it’s a bank, NBFC, or private lender, they often hesitate to offer loans to retirees due to limited income and higher risk. But one name continues to stand strong — Life Insurance Corporation of India (LIC).</p>
+      
+      <h3 style="color:#007acc; margin-top:20px;">Why Financial Institutions Say “No”</h3>
+      <p>Most lenders evaluate your repayment capacity and income stability before approving a loan. At 60, these factors change:</p>
+      <ul style="padding-left: 20px;">
+        <li>Regular salary income stops</li>
+        <li>Pension may not meet loan eligibility criteria</li>
+        <li>Shorter repayment tenure increases risk</li>
+        <li>Collateral requirements become stricter</li>
+      </ul>
+      
+      <h3 style="color:#007acc; margin-top:20px;">🛡️ How LIC Stands Apart</h3>
+      <p>LIC offers loan‑against‑policy options that rely on your policy’s surrender value, not your age or income. This makes LIC unique among financial institutions:</p>
+      <ul style="padding-left: 20px;">
+        <li>Loan available even after retirement</li>
+        <li>No external collateral required</li>
+        <li>Competitive interest rates</li>
+        <li>Hassle‑free documentation</li>
+      </ul>
+      
+      <p style="margin-top:20px;">Your life insurance policy becomes your financial backup, ensuring liquidity when others say “no.”</p>
+    `
+  }
+};
+
+function openBlog(blogKey) {
+  const blog = blogData[blogKey];
+  if (!blog) return;
+
+  const blogWindow = window.open("", "_blank");
+  blogWindow.document.write(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>${blog.title} | EliteCover Consultants</title>
+      <style>
+        body { font-family: Arial, sans-serif; line-height: 1.8; color: #333; background: #f4f7fb; margin: 0; padding: 0; }
+        header { background: #007acc; color: #fff; padding: 20px; text-align: center; }
+        header h2 { margin: 0; font-size: 24px; }
+        .container { max-width: 800px; margin: 30px auto; background: #fff; padding: 35px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        h1 { color: #007acc; margin-top: 0; margin-bottom: 20px; font-size: 28px; }
+        img { width: 100%; max-height: 420px; object-fit: cover; border-radius: 10px; margin-bottom: 25px; }
+        .content { font-size: 17px; color: #222; }
+        li { margin-bottom: 8px; }
+        .back-btn { display: inline-block; margin-top: 30px; padding: 12px 24px; background: #007acc; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; transition: 0.3s; }
+        .back-btn:hover { background: #005f99; }
+      </style>
+    </head>
+    <body>
+      <header>
+        <h2>EliteCover Consultants</h2>
+      </header>
+      <div class="container">
+        <h1>${blog.title}</h1>
+        <img src="${blog.image}" alt="${blog.title}">
+        <div class="content">
+          ${blog.content}
+        </div>
+        <a href="javascript:window.close()" class="back-btn">← Close Article</a>
+      </div>
+    </body>
+    </html>
+  `);
+  blogWindow.document.close();
+}
+
 </script>
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.15});
