@@ -492,7 +492,7 @@ footer{
 
 /* SEO + accessibility + responsive performance improvements */
 html { scroll-behavior: smooth; }
-body { overflow-x: hidden; top: 0 !important; }
+body { overflow-x: hidden; }
 img, video { max-width: 100%; }
 button, a, input { -webkit-tap-highlight-color: transparent; }
 input, button { font: inherit; }
@@ -619,18 +619,11 @@ input, button { font: inherit; }
 }
 </style>
 <style>
-/* VIEW MORE AND TRANSLATE BUTTON STYLES */
-.blog-action-btn-group {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 18px;
-}
-
-.read-more-btn, .translate-btn {
+/* VIEW MORE BUTTON STYLE */
+.read-more-btn {
   display: inline-block;
-  padding: 10px 18px;
+  margin-top: 18px;
+  padding: 10px 22px;
   background-color: #007acc;
   color: #ffffff !important;
   text-decoration: none;
@@ -639,28 +632,11 @@ input, button { font: inherit; }
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 14px;
-}
-
-.translate-btn {
-  background-color: #28a745;
-}
-
-.translate-btn:hover {
-  background-color: #218838;
+  font-size: 15px;
 }
 
 .read-more-btn:hover {
   background-color: #005f99;
-}
-
-/* Hide Google Translate original top bar */
-.goog-te-banner-frame {
-  display: none !important;
-}
-
-#google_translate_element {
-  display: none;
 }
 </style>
 </head>
@@ -939,12 +915,7 @@ After graduation, many young individuals feel anxious to start earning. In a hur
 <p>When parents plan financially for their son or daughter from an early age, they can create a financial cushion for important milestones such as higher education, professional courses or the initial years of a career...</p>
 </div>
 </div>
-<div class="blog-action-btn-group">
-  <button class="read-more-btn" onclick="openBlog('blog1')">View More</button>
-  <button class="translate-btn" onclick="translateBlog(this, 'hi')">Hindi (हिंदी)</button>
-  <button class="translate-btn" onclick="translateBlog(this, 'gu')">Gujarati (ગુજરાતી)</button>
-  <button class="translate-btn" style="background-color:#6c757d;" onclick="translateBlog(this, 'en')">English</button>
-</div>
+<button class="read-more-btn" onclick="openBlog('blog1')">View More</button>
 </article>
 
 <article class="blog-post">
@@ -963,12 +934,7 @@ After graduation, many young individuals feel anxious to start earning. In a hur
 <p>Starting early gives financial goals more time to grow through disciplined saving and investing...</p>
 </div>
 </div>
-<div class="blog-action-btn-group">
-  <button class="read-more-btn" onclick="openBlog('blog2')">View More</button>
-  <button class="translate-btn" onclick="translateBlog(this, 'hi')">Hindi (हिंदी)</button>
-  <button class="translate-btn" onclick="translateBlog(this, 'gu')">Gujarati (ગુજરાતી)</button>
-  <button class="translate-btn" style="background-color:#6c757d;" onclick="translateBlog(this, 'en')">English</button>
-</div>
+<button class="read-more-btn" onclick="openBlog('blog2')">View More</button>
 </article>
 
 <article class="blog-post">
@@ -988,12 +954,7 @@ After graduation, many young individuals feel anxious to start earning. In a hur
 LIC offers loan‑against‑policy options that rely on your policy’s surrender value, not your age or income...</p>
 </div>
 </div>
-<div class="blog-action-btn-group">
-  <button class="read-more-btn" onclick="openBlog('blog3')">View More</button>
-  <button class="translate-btn" onclick="translateBlog(this, 'hi')">Hindi (हिंदी)</button>
-  <button class="translate-btn" onclick="translateBlog(this, 'gu')">Gujarati (ગુજરાતી)</button>
-  <button class="translate-btn" style="background-color:#6c757d;" onclick="translateBlog(this, 'en')">English</button>
-</div>
+<button class="read-more-btn" onclick="openBlog('blog3')">View More</button>
 </article>
 
 </div>
@@ -1088,22 +1049,7 @@ Ghuma, Ahmedabad, Gujarat - 380058
 © 2026 EliteCover Consultants. All Rights Reserved.
 </p>
 </footer>
-
-<div id="google_translate_element"></div>
-
 <!-- SCRIPTS -->
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'hi,gu,en',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
-  }, 'google_translate_element');
-}
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 <script>
 
 function sendDetails(form, downloadBtnId, planName){
@@ -1308,19 +1254,6 @@ function openBlog(blogKey) {
     </html>
   `);
   blogWindow.document.close();
-}
-
-/* ===========================
-   TRANSLATION FUNCTIONALITY
-=========================== */
-function translateBlog(btn, langCode) {
-  const selectBox = document.querySelector(".goog-te-combo");
-  if (selectBox) {
-    selectBox.value = langCode;
-    selectBox.dispatchEvent(new Event("change"));
-  } else {
-    alert("Translation engine loading... Please try again in a moment.");
-  }
 }
 
 </script>
